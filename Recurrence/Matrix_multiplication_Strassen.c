@@ -52,17 +52,6 @@ typedef struct _m
 	int a[N][N];	
 }m;
 
-m m1 = {0, N-1, 0, N-1, {{1, 2, 3, 4},
-						 {5, 6, 7, 8},
-						 {9, 10, 11, 12},
-						 {13, 14, 15, 16}}};
-
-m m2 = {0, N-1, 0, N-1, {{1, 2, 3, 4},
-						 {5, 6, 7, 8},
-						 {9, 10, 11, 12},
-						 {13, 14, 15, 16}}};
-
-
 void display(m matrix)
 {
 	int i, j;
@@ -71,7 +60,7 @@ void display(m matrix)
 	{
 		for(j = matrix.cs; j <= matrix.ce; j++)
 		{
-			printf("%3d ", matrix.a[i][j]);
+			printf("%d\t", matrix.a[i][j]);
 		}
 		printf("\n");
 	}
@@ -253,6 +242,16 @@ m multiply(m m1, m m2)
 
 int main(void)
 {
+	m m1 = {0, N-1, 0, N-1, {{1, 2, 3, 4},
+						    {5, 6, 7, 8},
+						    {9, 10, 11, 12},
+						    {13, 14, 15, 16}}};
+
+	m m2 = {0, N-1, 0, N-1, {{1, 2, 3, 4},
+						    {5, 6, 7, 8},
+						    {9, 10, 11, 12},
+						    {13, 14, 15, 16}}};		
+
 	printf("Matrix A is: \n");
 	display(m1);
 	printf("Matrix B is: \n");
